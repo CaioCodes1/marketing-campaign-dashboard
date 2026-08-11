@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhe da Campanha — Marketing Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/css/tokens.css" />
+  <link rel="stylesheet" href="../src/css/base.css" />
+  <link rel="stylesheet" href="../src/css/components.css" />
+  <link rel="stylesheet" href="../src/css/themes.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <div class="main-content">
+      <div id="topbar-root"></div>
+
+      <main class="page">
+        <div class="page-header">
+          <div>
+            <a href="campaigns.html" class="text-secondary" style="text-decoration: none; font-size: 13px;">&larr; Voltar</a>
+            <h1 class="page-title" id="campaign-name">Carregando...</h1>
+            <p id="campaign-status"></p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 style="margin-bottom: 12px;">Informações</h3>
+            <p><strong>Cliente:</strong> <span id="campaign-client"></span></p>
+            <p><strong>Objetivo:</strong> <span id="campaign-objective"></span></p>
+            <p><strong>Descrição:</strong> <span id="campaign-description"></span></p>
+            <p><strong>Período:</strong> <span id="campaign-period"></span></p>
+            <p><strong>Orçamento:</strong> <span id="campaign-budget"></span></p>
+            <p><strong>Observações:</strong> <span id="campaign-notes"></span></p>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom: 12px;">Linha do tempo</h3>
+            <div class="timeline" id="timeline"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 12px;">Histórico de alterações</h3>
+          <div class="history-list" id="history-list"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="../src/js/pages/campaignDetail.page.js"></script>
+</body>
+</html>

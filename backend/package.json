@@ -1,0 +1,29 @@
+{
+  "name": "marketing-campaign-dashboard-backend",
+  "version": "1.0.0",
+  "description": "API REST do Marketing Campaign Dashboard",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:schema": "node src/database/runSchema.js",
+    "db:seed": "node src/database/seeds/seed.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

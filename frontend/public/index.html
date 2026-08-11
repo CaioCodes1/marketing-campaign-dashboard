@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Marketing Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/css/tokens.css" />
+  <link rel="stylesheet" href="../src/css/base.css" />
+  <link rel="stylesheet" href="../src/css/components.css" />
+  <link rel="stylesheet" href="../src/css/themes.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <div class="main-content">
+      <div id="topbar-root"></div>
+
+      <main class="page">
+        <div class="page-header">
+          <h1 class="page-title">Dashboard</h1>
+        </div>
+
+        <div class="grid grid-stats">
+          <div class="card stat-card">
+            <span class="stat-label">Total de campanhas</span>
+            <span class="stat-value" id="stat-total">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Ativas</span>
+            <span class="stat-value" id="stat-active">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Pausadas</span>
+            <span class="stat-value" id="stat-paused">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Finalizadas</span>
+            <span class="stat-value" id="stat-completed">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Investimento total</span>
+            <span class="stat-value" id="stat-invested">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Orçamento restante</span>
+            <span class="stat-value" id="stat-remaining">-</span>
+          </div>
+        </div>
+
+        <div class="grid grid-charts">
+          <div class="card chart-card">
+            <h3>Campanhas por status</h3>
+            <canvas id="status-chart"></canvas>
+          </div>
+          <div class="card chart-card">
+            <h3>Investimento por mês</h3>
+            <canvas id="investment-chart"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 12px;">⚠ Campanhas terminando esta semana</h3>
+          <div class="alert-list" id="ending-list"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script type="module" src="../src/js/pages/dashboard.page.js"></script>
+</body>
+</html>

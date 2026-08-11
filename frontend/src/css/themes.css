@@ -1,0 +1,25 @@
+[data-theme='dark'] .theme-icon-light,
+:root:not([data-theme='light']) .theme-icon-light {
+  display: none;
+}
+
+[data-theme='light'] .theme-icon-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .theme-icon-dark {
+    display: inline;
+  }
+  :root:not([data-theme='light']) .theme-icon-light {
+    display: none;
+  }
+}
+
+[data-theme='dark'] .theme-icon-dark {
+  display: inline;
+}
+
+.theme-icon-dark {
+  display: none;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financeiro — Marketing Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/css/tokens.css" />
+  <link rel="stylesheet" href="../src/css/base.css" />
+  <link rel="stylesheet" href="../src/css/components.css" />
+  <link rel="stylesheet" href="../src/css/themes.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <div class="main-content">
+      <div id="topbar-root"></div>
+
+      <main class="page">
+        <div class="page-header">
+          <h1 class="page-title">Financeiro</h1>
+        </div>
+
+        <div class="grid grid-stats">
+          <div class="card stat-card">
+            <span class="stat-label">Investido total</span>
+            <span class="stat-value" id="stat-invested">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Orçamento usado</span>
+            <span class="stat-value" id="stat-used-pct">-</span>
+          </div>
+          <div class="card stat-card">
+            <span class="stat-label">Restante</span>
+            <span class="stat-value" id="stat-remaining">-</span>
+          </div>
+        </div>
+
+        <div class="grid grid-charts">
+          <div class="card chart-card">
+            <h3>Top 5 campanhas por investimento</h3>
+            <canvas id="top-campaigns-chart"></canvas>
+          </div>
+          <div class="card chart-card">
+            <h3>Investimento por plataforma</h3>
+            <canvas id="platform-chart"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script type="module" src="../src/js/pages/financial.page.js"></script>
+</body>
+</html>
