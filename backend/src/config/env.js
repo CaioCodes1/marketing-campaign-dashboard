@@ -24,5 +24,15 @@ module.exports = {
     secret: process.env.JWT_SECRET,
     expiresIn: process.env.JWT_EXPIRES_IN || '7d',
   },
-  corsOrigin: process.env.CORS_ORIGIN || '*',
+  /**
+   * CORS com padrao RESTRITIVO, nao permissivo.
+   *
+   * Antes o padrao era '*': subir sem definir a variavel deixava a API
+   * aceitando requisicao de qualquer site. Ou seja, o erro de configuracao mais
+   * provavel - esquecer de definir - era justamente o mais perigoso.
+   *
+   * Agora, esquecer a variavel quebra o frontend de forma visivel, o que e
+   * muito melhor que abrir a API em silencio. Falhar fechado, nunca aberto.
+   */
+  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:5500',
 };
